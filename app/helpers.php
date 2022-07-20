@@ -1,14 +1,17 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Gloudemans\Shoppingcart\Facades\Cart;
  use App\Models\Book;
 
  //recuperar el stock de un libro con su id
 function cantidad($book_id){
 
-    $book = Book::find($book_id);
+    //$book = Book::find($book_id);
+    $producto = DB::connection('pruebas')->table('inventarios')->where('id', 18)->first();
 
-    $cantidad = $book->cantidad;
+
+    $cantidad = $producto->stock_inventario;
 
     return $cantidad;
 }

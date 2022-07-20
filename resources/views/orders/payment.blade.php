@@ -16,10 +16,10 @@
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <p class="text-lg font-semibold uppercase">Envío</p>
-                    @if ($order->envio_type != 1)
+                    @if ($order->envio_type == 1)
                     <p class="text-sm">Los Libros deben ser recogidos en tienda</p>
                     {{-- direccion de la tiendas donde se ubican los libros --}}
-                    <p class="text-sm">Calle falsa 123</p>
+                    <p class="text-sm">Calle 123 Avenida</p>
                     @else
                     <p class="text-sm">Los Libros seran envíados a:</p>
                     <p class="text-sm">{{ $order->direccion }}</p>
