@@ -21,14 +21,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(RepositoriesSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(AuthorSeeder::class);
-        $this->call(EditorialSeeder::class);
-        $this->call(BookSeeder::class);
-        $this->call(RoleSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(CitySeeder::class);
+        // $this->call(RepositoriesSeeder::class);
+        // $this->call(CategorySeeder::class);
+        // $this->call(AuthorSeeder::class);
+        // $this->call(EditorialSeeder::class);
+        // $this->call(BookSeeder::class);
+        // $this->call(RoleSeeder::class);
+        // $this->call(UserSeeder::class);
+        // $this->call(CitySeeder::class);
 
         // User::factory(10)->create()->each(function($user){
         //     $user->assignRole('usuario');

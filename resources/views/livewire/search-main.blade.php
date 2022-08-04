@@ -1,5 +1,5 @@
 <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-start " x-data>
-    <div class="max-w-lg w-full lg:max-w-2xl ">
+    <div class="max-w-lg w-full lg:max-w-4xl ">
         <label for="search" class="sr-only">Search </label>
         <form action={{  route('search')}} class="relative" autocomplete="off">
             <button class="absolute inset-y-0 left-0 pl-3 flex items-center ">
@@ -12,7 +12,7 @@
     </div>
 
     {{-- listado de opciones de busqueda --}}
-    <div class="absolute max-w-lg w-full lg:max-w-2xl mt-12 hidden" :class="{ 'hidden' : !$wire.open }" @click.away="$wire.open = false">
+    <div class="absolute max-w-lg w-full lg:max-w-4xl mt-12 hidden" :class="{ 'hidden' : !$wire.open }" @click.away="$wire.open = false">
         <div class="bg-white rounded-lg shadow-lg mt-1">
             <div class="px-4 py-3">
                 {{-- listar datos del la consulta del controlador SearchMain --}}
