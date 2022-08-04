@@ -35,7 +35,7 @@
                     x-text="isCollapsed ? 'Ver menos' : 'Ver mas'"
                     class="font-semibold text-gray-500 underline"
                     ></button>
-                </p>
+            </p>
 
 
             <hr class="mb-2">
