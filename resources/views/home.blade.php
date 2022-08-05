@@ -107,7 +107,7 @@
 
 
                     <p class="mt-2 text-sm font-semibold px-2 ">
-                        {{ $book->precio }}
+                       Precio: {{ $book->precio }} Bs.
                     </p>
 
                     <button onclick="location.href ='{{ route('books.show', $book) }}' " name="add" type="button" class="flex items-center w-full justify-center p-2 sm:px-5 sm:py-3 sm:mt-2 text-white bg-custom-500  hover:bg-orange-400 focus:outline-none  rounded-lg">

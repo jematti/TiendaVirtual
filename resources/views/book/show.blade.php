@@ -19,13 +19,13 @@
             src="{{ asset('img/portada1.jpg')}}">
           {{-- seccion informacion del libro --}}
           <div class="lg:w-2/5 w-full lg:pl-5 lg:py-6 lg:pr-2 mt-6 lg:mt-0 ">
-            <h1 class="text-gray-900 text-xl title-font font-medium mb-1">{{ $book->titulo }}</h1>
+            <h1 class="text-gray-900 text-2xl title-font font-bold mb-1">{{ $book->titulo }}</h1>
             <h2 class="text-lg title-font text-gray-500 tracking-widest">
-                <a href="{{ route('author.show', $book->author->id) }}">
+                {{-- <a href="{{ route('author.show', $book->author->id) }}">
                     {{ $book->author->nombre_autor }}
-                </a>
+                </a> --}}
             </h2>
-             <p
+                {{-- <p
                 x-data="{ isCollapsed: false, maxLength: 750, originalContent: '', content: '' }"
                 x-init="originalContent = $el.firstElementChild.textContent.trim(); content = originalContent.slice(0, maxLength)"
                 >
@@ -39,19 +39,34 @@
                     x-text="isCollapsed ? 'Ver menos' : 'Ver mas'"
                     class="font-semibold text-gray-500 underline"
                     ></button>
+                </p> --}}
+                <p class="text-justify">
+                    #FCBCB|26°FERIA INTERNACIONAL DEL LIBRO DE LA PAZ 2022
+                    La Fundación Cultural del Banco Central de Bolivia, junto a sus repositorios nacionales y centros culturales presentes en la FIL, espacio donde ofrece a la población un abanico de material literario, cultural y de investigación para todos los amantes de la lectura.
+                    <br>
+                    <hr class="mb-2">
+                    Ven y visítanos en nuestro stand en la planta baja del bloque Rojo del campo ferial Chuquiago Marka.
+                    <br>
+                    En los siguientes horarios:
+                    <span class="font-semibold">
+                    <br>
+                    🕛Lunes a jueves de 14:00 a 22:00
+                    <br>
+                    🕛Viernes y sábado de 10:00 a 23:00
+                    <br>
+                    🕛Domingo de 10:00 a 22:00
+                    </span>
                 </p>
 
-
-            <hr class="mb-2">
-            <div class="flex">
+            {{-- <div class="flex">
                 <h4 class="font-medium mx-4">Categoria:</h4>
               <button class="flex text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">{{ $book->category->nombre_categoria }}</button>
-            </div>
+            </div> --}}
           </div>
           {{-- seccion de datos  de pago y envio del libro --}}
           <div class="lg:w-1/3 w-full lg:pl-2 lg:py-6 mt-6 lg:mt-0 lg:border-l border-gray-900 ">
             <p class="text-gray-900 text-base title-font font-medium mb-1">Precio:</p>
-            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ $book->precio }}bs</h1>
+            <h1 class="text-gray-900 text-3xl pl-10 title-font font-bold mb-1">{{ $book->precio }}bs</h1>
                 {{-- añadir al carro de compras --}}
                 @can('nav.users')
                    @livewire('add-cart-item',['book'=>$book])

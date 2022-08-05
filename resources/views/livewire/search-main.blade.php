@@ -18,7 +18,7 @@
                 {{-- listar datos del la consulta del controlador SearchMain --}}
                 @forelse ($books as $book)
                 <a href="{{ route('books.show', $book) }}" class="flex">
-                    <img src="{{ asset('uploads').'/'.$book->imagen}}" alt="imagen de busqueda" class="w-16 h-12 object-cover">
+                    {{-- <img src="{{ asset('uploads').'/'.$book->imagen}}" alt="imagen de busqueda" class="w-16 h-12 object-cover"> --}}
                     <div class="ml-4 ">
                         <p class="text-lg font-semibold">{{ $book->titulo }}</p>
                         <p class="text-base  text-gray-500 font-medium">{{ $book->nombre_autor}}</p>
