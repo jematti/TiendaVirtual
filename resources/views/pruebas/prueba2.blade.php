@@ -79,45 +79,96 @@
 
 
 <div class="md:grid md:grid-cols-3 md:gap-5 content-center my-5 sm:flex ">
-
-    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
-        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
-        <div class="text-center relative py-14">
-            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                </svg>
-            </span>
-            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
-            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+    <a href="{{ route('ABNB') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w-full" src="{{ asset('img/abnb.jpg')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Archivo y Biblioteca Nacionales de Bolivia</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (ABNB)</span>
+            </div>
         </div>
-    </div>
+    </a>
 
-    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
-        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
-        <div class="text-center relative py-14">
-            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                </svg>
-            </span>
-            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
-            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+    <a href="{{ route('CCP') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w-full" src="{{ asset('img/ccp.jpg')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Centro de la Cultura Plurinacional</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (CCP)</span>
+            </div>
         </div>
-    </div>
+    </a>
 
-    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
-        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
-        <div class="text-center relative py-14">
-            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                </svg>
-            </span>
-            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
-            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+    <a href="{{ route('MNA') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w-full" src="{{ asset('img/mna.jpg')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Museo Nacional de Arte</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (MNA)</span>
+            </div>
         </div>
-    </div>
+    </a>
+
+    <a href="{{ route('MUSEF') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w-full" src="{{ asset('img/musef.jpg')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Museo Nacional de Etnografía y Folklore</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (MUSEF)</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="{{ route('CMN') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w-full" src="{{ asset('img/cmn.jpg')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Casa de la Moneda Nacional</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (CMN)</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="{{ route('CDL') }}">
+        <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+            <img class="w- full" src="{{ asset('img/cdl.jfif')}}" alt="" />
+            <div class="text-center relative py-14">
+                <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 15l7-7 7 7" clip-rule="evenodd" />
+                    </svg>
+                </span>
+                <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Casa de la Libertad</h1>
+                <span class="text-lg text-gray-700 hover:text-gray-900"> (CDL)</span>
+            </div>
+        </div>
+    </a>
+
 
 
 </div>

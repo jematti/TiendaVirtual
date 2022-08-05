@@ -21,7 +21,7 @@ class SearchController extends Controller
                             ->where('books.titulo','LIKE',"%". $book_search ."%")
                             ->orWhere('authors.nombre_autor', 'LIKE' , '%' .$book_search. '%')
                             ->select('books.id','books.imagen','books.titulo','books.precio','authors.nombre_autor')
-                            ->take(5)
+                            ->take(10)
                             ->get();
 
         // busqueda solo titulos

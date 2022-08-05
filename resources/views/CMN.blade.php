@@ -4,7 +4,7 @@
 @section('contenido')
 <section class="bg-white py-2">
     <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8 ">
-        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate text-center">Resultados de la Busqueda :</h2>
+        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate text-center">Casa de la Moneda Nacional (CMN) </h2>
         <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-5 ">
             {{-- seccion de libros --}}
             @forelse($books as $book)

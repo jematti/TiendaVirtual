@@ -22,7 +22,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data['book']= Book::orderBy('id','desc')->simplepaginate(8);
+        $data['book']= Book::orderBy('titulo','asc')->simplepaginate(8);
         return view('book.index',$data);
     }
 
@@ -194,8 +194,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        // $book->delete();
-        // return redirect()->route('books.index')
-        //                 ->with('eliminar','ok');
+        $book->delete();
+        return redirect()->route('books.index')
+                        ->with('eliminar','ok');
     }
 }

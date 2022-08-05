@@ -45,14 +45,15 @@
 
                 @endauth
 
-                @guest
+                 @guest
+
                 <div class="hidden lg:block lg:ml-2">
                     <div class="flex">
                         <a class="block w-1/2 px-3 py-2 mx-1 rounded text-center text-sm bg-white font-medium text-black leading-5 hover:bg-gray-600 hover:text-white md:mx-2 md:w-auto" href="{{ route('login') }}">Administración</a>
-
                     </div>
                 </div>
-                @endguest
+                 @endguest
+
             </div>
         </div>
     </div>

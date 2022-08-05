@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('idioma');
             $table->text('resumen');
             $table->string('imagen');
-            $table->decimal('precio', 8, 2);
+            $table->float('precio');
             $table->integer('cantidad');
             $table->double('alto', 8, 2)->nullable();
             $table->double('ancho', 8, 2)->nullable();

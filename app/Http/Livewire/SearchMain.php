@@ -31,7 +31,7 @@ class SearchMain extends Component
                             ->where('books.titulo','LIKE',"%". $this->search_main ."%")
                             ->orWhere('authors.nombre_autor', 'LIKE' , '%' .$this->search_main. '%')
                             ->select('books.id','books.imagen','books.titulo','authors.nombre_autor')
-                            ->take(5)
+                            ->take(10)
                             ->get();
 
             //busqueda solo titulos

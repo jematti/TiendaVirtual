@@ -1,9 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CCPController;
+use App\Http\Controllers\CDLController;
+use App\Http\Controllers\CMNController;
+use App\Http\Controllers\MNAController;
+use App\Http\Controllers\ABNBController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MUSEFController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\ImagenController;
@@ -13,11 +19,11 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\RepositoryController;
 use App\Http\Controllers\CreateOrderController;
 use App\Http\Controllers\ShoppingCartController;
 use App\Http\Controllers\Admin\AdminOrderController;
-use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +35,13 @@ use App\Http\Controllers\Admin\UserController;
 // Página de inicio
 
 Route::get('/',HomeController::class)->name('home');
+//repositorios
+Route::get('/ABNB',ABNBController::class)->name('ABNB');
+Route::get('/CCP',CCPController::class)->name('CCP');
+Route::get('/MNA',MNAController::class)->name('MNA');
+Route::get('/MUSEF',MUSEFController::class)->name('MUSEF');
+Route::get('/CMN',CMNController::class)->name('CMN');
+Route::get('/CDL',CDLController::class)->name('CDL');
 
 
 Route::group(['middleware' => ['auth','verified']], function(){

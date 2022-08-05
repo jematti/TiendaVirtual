@@ -4,7 +4,7 @@
 @section('contenido')
 <section class="bg-white py-2">
     <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8 ">
-        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate text-center">Resultados de la Busqueda :</h2>
+        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate text-center">ARCHIVO Y BIBLIOTECA NACIONALES DE BOLIVIA (ABNB) </h2>
         <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-5 ">
             {{-- seccion de libros --}}
             @forelse($books as $book)
@@ -23,9 +23,8 @@
 
                     <div class="p-6">
                         <div class="group cursor-pointer relative ">
-                            <p class="line-clamp-2 mt-2 px-2 text-xl font-bold text-dark ">
+                            <p class="line-clamp-2  mt-2 px-2 text-xl font-bold text-dark ">
                                 {{ $book->titulo }}
-
                             </p>
                             {{-- detalles de Popup de descripcion --}}
                             <div class="opacity-0 lg:w-60 sm:w-30 lg:ml-20  sm:ml-0d lg:px-1 sm:px-2   bg-black text-white text-center text-sm rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full  pointer-events-none">

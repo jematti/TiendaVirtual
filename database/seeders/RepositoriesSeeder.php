@@ -57,20 +57,6 @@ class RepositoriesSeeder extends Seeder
 
 
         DB::table('repositories')->insert([
-            'nombre_repositorio' => 'Museo Nacional de Etnografía y Folklore - Sucre',
-            'sigla' => 'MUSEF',
-            'ciudad' => 'Sucre',
-            'correo' => 'musef@musef.org.bo',
-            'nombre_encargado' => 'Jhon smith',
-            'ubicacion' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60331.86588746341!2d-65.30479159329884!3d-19.0750946469394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf369b4aaa19%3A0x1dbe166567373a2!2sMusef!5e0!3m2!1ses-419!2sbo!4v1656939797152!5m2!1ses-419!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-            'direccion' => 'Calle España N° 74 - Sucre',
-            'horario_atencion' => 'Lunes - Viernes: 8:30 a 16:00 ',
-            'telefono' => '(591-4) 6455293',
-            'pagina_web' => 'http://musef.org.bo/'
-        ]);
-
-
-        DB::table('repositories')->insert([
             'nombre_repositorio' => 'Casa de la Moneda Nacional',
             'sigla' => 'CMN',
             'ciudad' => 'Potosi',
@@ -108,6 +94,32 @@ class RepositoriesSeeder extends Seeder
             'telefono' => '(+591) 4 6452246 ',
             'pagina_web' => 'https://www.archivoybibliotecanacionales.org.bo/'
         ]);
+
+        DB::table('repositories')->insert([
+            'nombre_repositorio' => 'Tienda',
+            'sigla' => 'Tienda',
+            'ciudad' => 'La Paz',
+            'correo' => 'fundacion@fundacionculturalbcb.gob.bo',
+            'nombre_encargado' => 'Alberto Valeriano',
+            'ubicacion' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.345335940135!2d-68.1312904847918!3d-16.508654488610752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21b7e47521e1%3A0x7fa0fb5d64caf2f2!2sFUNDACI%C3%93N%20CULTURAL%20DEL%20BANCO%20CENTRAL%20DE%20BOLIVIA!5e0!3m2!1ses-419!2sbo!4v1659733866743!5m2!1ses-419!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+            'direccion' => 'Calle Fernando Guachalla Nº 476, Zona Sopocachi, La Paz - Bolivia',
+            'horario_atencion' => 'Lunes a Sabado 08:30 am - 18:30 pm',
+            'telefono' => '+591) 2 424148 - 2 418419',
+            'pagina_web' => 'http://www.fundacionculturalbcb.gob.bo/'
+        ]);
+
+        // DB::table('repositories')->insert([
+        //     'nombre_repositorio' => 'Museo Nacional de Etnografía y Folklore - Sucre',
+        //     'sigla' => 'MUSEF',
+        //     'ciudad' => 'Sucre',
+        //     'correo' => 'musef@musef.org.bo',
+        //     'nombre_encargado' => 'Jhon smith',
+        //     'ubicacion' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60331.86588746341!2d-65.30479159329884!3d-19.0750946469394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf369b4aaa19%3A0x1dbe166567373a2!2sMusef!5e0!3m2!1ses-419!2sbo!4v1656939797152!5m2!1ses-419!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+        //     'direccion' => 'Calle España N° 74 - Sucre',
+        //     'horario_atencion' => 'Lunes - Viernes: 8:30 a 16:00 ',
+        //     'telefono' => '(591-4) 6455293',
+        //     'pagina_web' => 'http://musef.org.bo/'
+        // ]);
 
     }
 }
