@@ -31,13 +31,13 @@
                             <div class="opacity-0 lg:w-60 sm:w-30 lg:ml-20  sm:ml-0d lg:px-1 sm:px-2   bg-black text-white text-center text-sm rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full  pointer-events-none">
                                 {{ $book->titulo }}
                                 <br>
-                                {{ $book->author->nombre_autor }}
+                                {{ $book->nombre_autor }}
                             </div>
                             {{-- fin de detalle --}}
                         </div>
 
                         <h5 class="truncate px-2 text-base font-medium text-gray-500">
-                            {{ $book->author->nombre_autor }}
+                            {{ $book->nombre_autor }}
                         </h5>
 
                         <p class="mt-2 text-sm font-semibold px-2 ">

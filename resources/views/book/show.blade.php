@@ -15,8 +15,8 @@
             src="{{ asset('uploads').'/'.$book->imagen}}"> --}}
             <img
             alt="imagen del post {{ $book->titulo }}"
-            class="lg:w-1/4 max-w-screen-sm lg:h-72 h-64 object-cover object-center rounded"
-            src="{{ asset('img/portada1.jpg')}}">
+            class="lg:w-1/4 max-w-screen-sm sm:h-72 lg:h-full object-cover object-center rounded"
+            src="{{ asset('img/portada3.jpg')}}">
           {{-- seccion informacion del libro --}}
           <div class="lg:w-2/5 w-full lg:pl-5 lg:py-6 lg:pr-2 mt-6 lg:mt-0 ">
             <h1 class="text-gray-900 text-2xl title-font font-bold mb-1">{{ $book->titulo }}</h1>

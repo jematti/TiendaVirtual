@@ -1,127 +1,131 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <title>{{ config('app.name', 'Libreria Virtual FC-BCB') }}</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    {{-- hojas de estilos diferentes --}}
-    @stack('styles')
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- Styles Livewire --}}
-    @livewireStyles
+@extends('layouts.app')
 
 
-    <style>
-        .work-sans {
-            font-family: 'Work Sans', sans-serif;
-        }
+@section('contenido')
 
-        #menu-toggle:checked + #menu {
-            display: block;
-        }
+{{-- Seccion de carrousel de ofertas --}}
+<div class="carousel static container mx-auto" style="max-width:1600px;">
+    <div class="carousel-inner relative overflow-hidden w-full">
+        <!--Slide 1-->
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{ asset('img/portada1l.jpeg')}}');">
 
-        .hover\:grow {
-            transition: all 0.3s;
-            transform: scale(1);
-        }
+                {{-- <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Libros en Tendencia</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                        </div>
+                    </div> --}}
 
-        .hover\:grow:hover {
-            transform: scale(1.02);
-        }
+            </div>
+        </div>
+        <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
-        .carousel-open:checked + .carousel-item {
-            position: static;
-            opacity: 100;
-        }
+        <!--Slide 2-->
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+            <div class="block h-full w-full mx-auto  pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{ asset('img/por2.jpg')}}');">
 
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
+                {{-- <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Libros por temporada</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                        </div>
+                    </div> --}}
 
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
-            display: block;
-        }
+            </div>
+        </div>
+        <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
+        <!--Slide 3-->
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('{{ asset('img/por1.jpg')}}');">
 
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #000;
-            /*Set to match the Tailwind colour you want the active one to be */
-        }
-    </style>
+                {{-- <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Eventos Semanal</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                        </div>
+                    </div> --}}
 
+            </div>
+        </div>
+        <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
-</head>
+        <!-- Add additional indicators for each slide-->
+        <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+                <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-900">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-900">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-900">•</label>
+            </li>
+        </ol>
 
-    <body>
-        {{-- seccion barra de navegacion --}}
-        @livewire('navigation')
+    </div>
+</div>
 
-        {{-- Seccion para introducir contenido --}}
-        <main class="max-w-7xl mx-auto">
-            @yield('contenido')
-        </main>
+{{-- mostrar libros de la base de datos --}}
 
 
 
-    </body>
 
-        <!-- Scripts Livewire -->
-        @livewireScripts
+<div class="md:grid md:grid-cols-3 md:gap-5 content-center my-5 sm:flex ">
 
-        {{-- enlace a archivos js --}}
-        <script src="{{ asset('js/app.js') }}" defer ></script>
+    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
+        <div class="text-center relative py-14">
+            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
+            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+        </div>
+    </div>
 
-        {{-- Sweet Alert --}}
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
+        <div class="text-center relative py-14">
+            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
+            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+        </div>
+    </div>
 
-         {{-- jquery --}}
-        <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"> </script>
-
-
-
-        <script>
-            $('.actualizar').submit(function(e){
-            //previene el comportamiento por defecto del formulario
-            e.preventDefault();
-
-            Swal.fire({
-            title: '¿Esta Seguro de Actualizar estos Datos?',
-            text: "¡Esta accion no es reversible!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, estoy Seguro',
-            }).then((result) => {
-                if (result.value) {
-                    this.submit();
-                }
-                })
-            });
-        </script>
-
-        @yield('js')
+    <div class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+        <img class="w-full" src="{{ asset('img/portada1.jpg')}}" alt="" />
+        <div class="text-center relative py-14">
+            <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Meditaciones en casa</h1>
+            <span class="text-lg text-gray-700 hover:text-gray-900">Susan Paz</span>
+        </div>
+    </div>
 
 
-</html>
+</div>
+
+
+
+
+{{-- Seccion para el footer --}}
+@livewire('footer')
+
+@endsection

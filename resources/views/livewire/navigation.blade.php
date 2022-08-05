@@ -21,6 +21,38 @@
                 <div class="flex-1">
                     @livewire('search-main')
                 </div>
+
+                @auth
+
+                    @can('nav.admin')
+                    <div class="hidden lg:block lg:ml-2">
+                        <div class="flex">
+                            <a class="block w-1/2 px-3 py-2 mx-1 rounded text-center text-sm bg-white font-medium text-black leading-5 hover:bg-gray-600 hover:text-white md:mx-2 md:w-auto" href="#">
+                                Hola: <span class="font-normal">
+                                    {{auth()->user()->name}}
+                                </span>
+                            </a>
+                            <a class="block w-1/2 px-3 py-2 mx-1 rounded text-center text-sm bg-custom-400 font-medium text-white leading-5 hover:bg-blue-600 md:mx-0 md:w-auto" href="{{route('books.index')}}">Administración</a>
+                            {{-- metodo para cerrar sesion --}}
+                            <form action="{{route('logout')}}" method="POST" class="mx-2">
+                                @csrf
+                                <button type="submit" class="block w-1/2 mx-2 px-1 py-2  rounded text-center text-sm bg-red-500 font-medium text-white leading-5 hover:bg-red-400 md:mx-0 md:w-auto ">Cerrar Sesión</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    @endcan
+
+                @endauth
+
+                @guest
+                <div class="hidden lg:block lg:ml-2">
+                    <div class="flex">
+                        <a class="block w-1/2 px-3 py-2 mx-1 rounded text-center text-sm bg-white font-medium text-black leading-5 hover:bg-gray-600 hover:text-white md:mx-2 md:w-auto" href="{{ route('login') }}">Administración</a>
+
+                    </div>
+                </div>
+                @endguest
             </div>
         </div>
     </div>

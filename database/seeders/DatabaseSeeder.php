@@ -26,8 +26,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(AuthorSeeder::class);
         // $this->call(EditorialSeeder::class);
         // $this->call(BookSeeder::class);
-        // $this->call(RoleSeeder::class);
-        // $this->call(UserSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(UserSeeder::class);
         // $this->call(CitySeeder::class);
 
         // User::factory(10)->create()->each(function($user){
