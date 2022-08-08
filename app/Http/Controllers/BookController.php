@@ -22,8 +22,10 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data['book']= Book::orderBy('titulo','asc')->simplepaginate(8);
-        return view('book.index',$data);
+        // $data['book']= Book::orderBy('titulo','asc')->simplepaginate(8);
+        // return view('book.index',$data);
+
+        return view('book.index');
     }
 
     /**
