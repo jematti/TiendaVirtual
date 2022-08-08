@@ -88,7 +88,7 @@
 
                 <div class="p-2">
                     <div class="group cursor-pointer relative ">
-                        <p class="line-clamp-2 lg:text-justify mt-2 px-2 text-xl font-bold text-dark ">
+                        <p class="line-clamp-2 mt-2 px-2 text-lg font-bold text-dark ">
                             {{ $book->titulo }}
 
                         </p>
@@ -106,8 +106,8 @@
                     </h5>
 
 
-                    <p class="mt-2 text-sm font-semibold px-2 ">
-                        {{ $book->precio }}
+                    <p class="mt-2 text-lg font-semibold px-2 ">
+                        Bs. {{ $book->precio }}
                     </p>
 
                     <button onclick="location.href ='{{ route('books.show', $book) }}' " name="add" type="button" class="flex items-center w-full justify-center p-2 sm:px-5 sm:py-3 sm:mt-2 text-white bg-custom-500  hover:bg-orange-400 focus:outline-none  rounded-lg">

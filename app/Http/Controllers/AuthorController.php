@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Author;
 class AuthorController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
     /**
      * Display a listing of the resource.
      *

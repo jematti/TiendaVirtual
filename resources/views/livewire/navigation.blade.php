@@ -8,7 +8,7 @@
             <div class="container flex items-center justify-between h-20">
 
                 {{-- seccion del icono --}}
-                <div class="hidden lg:flex items-center px-2 lg:px-0">
+                <div class="flex items-center px-2 lg:px-0">
 
                     <a class="flex-shrink-0" href="{{ route('home') }}">
                         <img class="block lg:hidden h-12 w-16" src="{{ asset('img/logo100.png')}}" alt="Logo">

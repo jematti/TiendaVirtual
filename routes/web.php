@@ -36,8 +36,7 @@ Route::group(['middleware' => ['auth','verified']], function(){
     Route::resource('users',UserController::class)->names('admin.users');
     //CRUD Categoria
     Route::resource('category', CategoryController::class);
-    //CRUD Autor
-    Route::resource('author', AuthorController::class);
+
     //CRUD Editorial
     Route::resource('editorial', EditorialController::class);
     //CRUD Repositorios
@@ -81,6 +80,8 @@ Route::group(['middleware' => ['auth','verified']], function(){
 
 });
 
+//CRUD Autor
+Route::resource('author', AuthorController::class);
 //CRUD libros
 Route::resource('books',BookController::class);
 //Ruta de la Barra de Busqueda Principal Busqueda
