@@ -69,11 +69,12 @@
                     </thead>
 
                     <tbody class="text-sm divide-y divide-gray-100">
+
                         <!-- tabla de datos -->
                         @foreach ($repository as $repositories)
                             <tr>
                                 <td class="p-2">
-
+                                    <div class="font-semibold text-center">{{ $repositories->id }}</div>
                                 </td>
                                 <td class="p-2">
                                     <div class="font-medium text-gray-800 w-64">

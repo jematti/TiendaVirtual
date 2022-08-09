@@ -55,11 +55,13 @@
                     </thead>
 
                     <tbody class="text-sm divide-y divide-gray-100">
+
+
                         <!-- tabla de datos -->
                         @foreach ($author as $authors)
                             <tr>
                                 <td class="p-2">
-
+                                    <div class="font-semibold text-center">{{ $authors->id }}</div>
                                 </td>
                                 <td class="p-2">
                                     <div class="font-medium text-gray-800">

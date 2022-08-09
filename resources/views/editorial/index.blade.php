@@ -58,10 +58,11 @@
 
                     <tbody class="text-sm divide-y divide-gray-100">
                         <!-- tabla de datos -->
+
                         @foreach ($editorial as $editorials)
                             <tr>
                                 <td class="p-2">
-                                    1
+                                    <div class="font-semibold text-center">{{ $editorials->id }}</div>
                                 </td>
                                 <td class="p-2">
                                     <div class="font-medium text-gray-800">

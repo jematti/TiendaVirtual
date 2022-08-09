@@ -65,7 +65,6 @@ Route::group(['middleware' => ['auth','verified']], function(){
     //ruta de ordenes
     Route::get('/orderscreate', [CreateOrderController::class, 'index'])->name('orderscreate.index');
 
-
     //para mostrar el pedido ya finalizado
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
 
@@ -99,12 +98,6 @@ Route::post('/logout',[LogoutController::class, 'store'])->name('logout');
 Route::get('/pruebas',function(){
      return view('pruebas.prueba2');
 });
-
-
-
-
-
-
 
 
 //Route::resource('books', LibroController::class);

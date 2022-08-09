@@ -40,10 +40,12 @@
                         </thead>
 
                         <tbody>
+
                             @foreach ($users as $user)
                             <tr>
                                 <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-base whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                                    {{ $user->id}}
+                                    {{-- {{ $user->id}} --}}
+                                    <div class="font-semibold text-center">{{ $user->id }}</div>
                                 </th>
                                 <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-base whitespace-nowrap p-4 ">
                                     {{ $user->name }}

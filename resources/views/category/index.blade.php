@@ -54,11 +54,12 @@
                     </thead>
 
                     <tbody class="text-sm divide-y divide-gray-100">
+
                         <!-- tabla de datos -->
                         @foreach ($category as $categories)
                             <tr>
                                 <td class="p-2">
-                                    1
+                                    <div class="font-semibold text-center">{{ $categories->id }}</div>
                                 </td>
                                 <td class="p-2">
                                     <div class="font-medium text-gray-800">
