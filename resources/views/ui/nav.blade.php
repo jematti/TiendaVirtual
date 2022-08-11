@@ -10,7 +10,7 @@
     <div class="flex w-full">
         {{-- menu administrador --}}
         @can('nav.admin')
-        <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh">
+        <aside class="hidden md:flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh">
 
             {{-- <a href="{{ route('home') }}" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -43,12 +43,12 @@
 
 
 
-            <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+            {{-- <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                 </svg>
                 <span>Reportes</span>
-            </a>
+            </a> --}}
 
             <div class="space-y-4 bg-white">
                 <div x-data="{ activeAccordion: false }">
@@ -70,6 +70,12 @@
                     <div x-show="activeAccordion" x-collapse class="mt-4">
 
                         <a href="{{ route('books.index') }}" class="flex items-center space-x-1 rounded-md pl-5 py-3 hover:bg-gray-100 hover:text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                            <span>Lista de Libros</span>
+                        </a>
+                        <a href="{{ route('books.create') }}" class="flex items-center space-x-1 rounded-md pl-5 py-3 hover:bg-gray-100 hover:text-blue-600">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                               </svg>
@@ -99,7 +105,8 @@
                     </div>
                 </div>
 
-                <div x-data="{ activeAccordion: false }">
+                {{-- souvenirs --}}
+                {{-- <div x-data="{ activeAccordion: false }">
                     <h3>
                         <button @click="activeAccordion = !activeAccordion" class="flex items-center w-full p-6 text-white bg-custom-100 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -122,7 +129,7 @@
                             repellendus praesentium!
                         </p>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </aside>

@@ -79,6 +79,17 @@
     <div class="max-w-screen-xl px-2 py-2 mx-auto sm:px-6  ">
 
         <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-5">
+
+            {{-- listar categorias --}}
+            @foreach ($categorias as $categoria)
+            <div class="bg-slate-500">
+                <p class="font-semibold text-lg text-white">
+                    {{ $categoria->nombre_categoria}}
+                </p>
+            </div>
+            @endforeach
+            {{-- fin lista de categorias --}}
+
             {{-- seccion de libros --}}
             @foreach ($books as $book)
             <a href='{{ route('books.show', $book) }}' class="relative block bg-white border border-gray-200">

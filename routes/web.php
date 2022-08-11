@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LogoutController;
@@ -13,11 +14,11 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\RepositoryController;
 use App\Http\Controllers\CreateOrderController;
 use App\Http\Controllers\ShoppingCartController;
 use App\Http\Controllers\Admin\AdminOrderController;
-use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,9 @@ Route::group(['middleware' => ['auth','verified']], function(){
     //ruta para ver mis ordenes
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 
+    //descargar imagenes
+    Route::get('/download/{file}' , [OrderController::class, 'download'])->name('orders.download');
+
 });
 
 //CRUD Autor
@@ -96,7 +100,8 @@ Route::post('/logout',[LogoutController::class, 'store'])->name('logout');
 
 //Rutas de prueba
 Route::get('/pruebas',function(){
-     return view('pruebas.prueba2');
+    //  return view('pruebas.prueba2');
+    Cart::destroy();
 });
 
 

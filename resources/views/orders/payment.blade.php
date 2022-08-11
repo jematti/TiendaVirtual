@@ -31,7 +31,10 @@
                     <p class="text-sm">Persona que recibira el libro: {{ $order->nombre_contacto }}</p>
                     <p class="text-sm">Correo: {{ $order->correo_contacto }}</p>
                     <p class="text-sm">Telefono: {{ $order->telefono_contacto }}</p>
-                    <p class="text-sm">Datos para la Factura: {{ $order->factura }}</p>
+                    <hr>
+                    <p class="text-lg font-semibold uppercase">Datos para la Factura: </p>
+                    <p class="text-base font-semibold">Nombre/Razon Social: {{ $order->nombre_factura}}</p>
+                    <p class="text-base font-semibold">NIT : {{ $order->nit_factura}}</p>
 
                 </div>
             </div>

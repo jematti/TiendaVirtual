@@ -28,6 +28,10 @@ class Order extends Model
     // producto que se ha generado la orden pero nose a pagado (Pasa de Pendiente a Anulado)
     const ANULADO = 5;
 
+    //estado de la facturacion
+    const NOFACTURADO = 100;
+    const FACTURADO = 200;
+
     // fillable inverso campo que no requieren en asignacion masiva
     protected $guarded = ['id','created_at','updated_at','status'];
 
