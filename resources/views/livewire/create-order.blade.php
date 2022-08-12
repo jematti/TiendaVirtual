@@ -1,4 +1,4 @@
-<div>
+<div class="container mx-auto">
     <div class="grid lg:grid-flow-col grid-rows-2 lg:grid-cols-3 md:grid-cols-1 gap-4 p-5 bg-gray-300 ">
         {{-- formulario de datos personales --}}
         <div class="shadow-lg text-lg text-left bg-white py-5 rounded-lg row-span-2">

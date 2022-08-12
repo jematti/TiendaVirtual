@@ -17,7 +17,7 @@ class Order extends Model
     //pago mediante deposito a la cuenta del banco
     const DEPOSITO = 20;
 
-    //estado del producto en pendiente hasta que se ejecute el pago
+    //estado del producto en pendiente hasta que se ejecute el pago / errores de deposito o datos incorrectos
     const PENDIENTE = 1;
     //el usuario ha generado la orden y lo ha pagado
     const RECIBIDO = 2;

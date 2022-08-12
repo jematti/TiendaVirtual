@@ -121,7 +121,7 @@
             </div>
 
             {{-- paginacion --}}
-            <div class="my-10">
+            <div class="m-10">
                 {{ $editorial->links() }}
             </div>
 @endsection

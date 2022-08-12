@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('nombre_factura');
             $table->string('nit_factura');
             $table->enum('estado_facturacion',[Order::FACTURADO,Order::NOFACTURADO])->default(Order::NOFACTURADO);
-            $table->string('nro_factura')->default('0');
+            $table->string('nro_factura')->nullable();
             $table->enum('tipo_pago', [Order::BANCAMOVIL,Order::DEPOSITO]);
             $table->string('imagen_deposito');
             $table->enum('estado',[Order::PENDIENTE,Order::RECIBIDO,Order::ENVIADO,Order::ENTREGADO,Order::ANULADO])->default(Order::PENDIENTE);

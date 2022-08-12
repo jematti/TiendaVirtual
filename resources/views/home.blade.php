@@ -4,7 +4,8 @@
 @section('contenido')
 
 {{-- Seccion de carrousel de ofertas --}}
-<div class="carousel static container mx-auto" style="max-width:1600px;">
+<div class="carousel static">
+    {{-- <div class="carousel static container mx-auto" style="max-width:1600px;"> --}}
     <div class="carousel-inner relative overflow-hidden w-full">
         <!--Slide 1-->
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
@@ -81,18 +82,18 @@
         <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-5">
 
             {{-- listar categorias --}}
-            @foreach ($categorias as $categoria)
+            {{-- @foreach ($categorias as $categoria)
             <div class="bg-slate-500">
                 <p class="font-semibold text-lg text-white">
                     {{ $categoria->nombre_categoria}}
                 </p>
             </div>
-            @endforeach
+            @endforeach --}}
             {{-- fin lista de categorias --}}
 
             {{-- seccion de libros --}}
             @foreach ($books as $book)
-            <a href='{{ route('books.show', $book) }}' class="relative block bg-white border border-gray-200">
+            <a href='{{ route('books.show', $book) }}' class="relative block bg-white border border-gray-200 rounded-lg">
 
                 <img loading="lazy" alt="imagen del post {{ $book->titulo }}" class="object-contain w-full sm:h-72 h-56 hover:grow hover:shadow-lg" src="{{ asset('uploads').'/'.$book->imagen}}" />
 

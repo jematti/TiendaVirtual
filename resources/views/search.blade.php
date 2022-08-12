@@ -2,15 +2,15 @@
 
 
 @section('contenido')
-<section class="bg-white py-2">
-    <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8 ">
+<section class="py-2">
+    <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8 bg-white">
         <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate text-center">Resultados de la Busqueda :</h2>
         <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-5 ">
             {{-- seccion de libros --}}
             @forelse($books as $book)
                 <a
                 href='{{ route('books.show', $book->id) }}'
-                class="relative block bg-white border border-gray-200"
+                class="relative block bg-white border border-gray-200 rounded-lg"
                 >
                     {{-- <img
                         loading="lazy"

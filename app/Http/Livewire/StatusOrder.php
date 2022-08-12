@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Order;
+
 use Livewire\Component;
 
 class StatusOrder extends Component
@@ -11,7 +11,7 @@ class StatusOrder extends Component
     public $order, $estado;
 
     public $observacion;
-
+    public $estado_facturacion;
     public $nro_factura;
 
     public $rules = [
@@ -24,7 +24,7 @@ class StatusOrder extends Component
         $this->validate($rules);
 
         $this->order->nro_factura = $this->nro_factura;
-        $this->order->estado_facturacion = Order::FACTURADO;
+        $this->order->estado_facturacion = '200';
         $this->order->save();
 
     }
@@ -32,10 +32,19 @@ class StatusOrder extends Component
     public function mount()
     {
         $this->estado = $this->order->estado;
+        $this->observacion = $this->order->observacion;
+        $this->nro_factura = $this->order->nro_factura;
     }
 
     public function actualizar(){
+        $rules = $this->rules;
+
         $this->order->estado = $this->estado;
+
+        if($this->estado == 5 || $this->estado == 1){
+            $rules['observacion'] = 'required';
+        }
+        $this->validate($rules);
         $this->order->observacion = $this->observacion;
         $this->order->save();
     }
