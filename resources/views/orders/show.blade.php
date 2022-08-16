@@ -106,8 +106,16 @@
                 Adjuntar Pago
             </button>
             @endif
-
         </div>
+
+        @if($order->estado == 1 || $order->estado == 5 || $order->observacion != "")
+        <div class="bg-white rounded-lg shadow-lg px-6 py-4 mb-6 border border-red-500">
+            <p class="text-gray-700 uppercase">
+                <span class="font-bold text-red-500">Observación:</span>
+                {{$order->observacion}}
+            </p>
+        </div>
+        @endif
 
         {{-- datos de contacto --}}
         <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
@@ -150,7 +158,6 @@
                     <p class="text-lg font-semibold uppercase">Datos para la Factura: </p>
                     <p class="text-base font-semibold">Nombre/Razon Social: {{ $order->nombre_factura}}</p>
                     <p class="text-base font-semibold">NIT : {{ $order->nit_factura}}</p>
-
 
                 </div>
             </div>

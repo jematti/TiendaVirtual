@@ -72,7 +72,7 @@
                         <span class="w-12 text-center">
                             @switch($order->estado)
                             @case(1)
-                            <i class="fas fa-business-time text-red-500 "></i>
+                            <i class="fas fa-business-time text-orange-500 "></i>
                             @break
                             @case(2)
                             <i class="fas fa-credit-card text-gray-500 "></i>
@@ -87,7 +87,7 @@
                             @break
 
                             @case(5)
-                            <i class="fas fa-times-circle text-orange-500 "></i>
+                            <i class="fas fa-times-circle text-red-500 "></i>
                             @break
                             @default
 

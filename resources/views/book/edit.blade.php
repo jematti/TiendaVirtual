@@ -303,7 +303,7 @@
         </div>
 
         <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label class="mb-2 block uppercase text-gray-500 font-bold" >
                 Fecha de Publicación
               </label>
@@ -323,6 +323,27 @@
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2">{{$message}}</p>
                 @enderror
             </div>
+
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="mb-2 block uppercase text-gray-500 font-bold" >
+                  ISBN
+                </label>
+                <input
+                      class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="isbn"
+                      name="isbn"
+                      type="text"
+                      placeholder="codigo ISBN del Libro"
+                      @error('isbn')
+                      border-red-500
+                      @enderror
+                      value="{{$book->isbn}}"
+                  />
+
+                  @error('isbn')
+                  <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2">{{$message}}</p>
+                  @enderror
+              </div>
         </div>
 
  {{-- datos opcionales --}}

@@ -9,14 +9,14 @@
       <div class="container px-5 py-5 mx-auto">
         <div class="lg:w-full flex flex-wrap mx-2 object-center">
           {{-- seccion de la imagen --}}
-          {{-- <img
+          <img
             alt="imagen del post {{ $book->titulo }}"
-            class="lg:w-1/4 max-w-screen-sm lg:h-72 h-64 object-cover object-center rounded"
-            src="{{ asset('uploads').'/'.$book->imagen}}"> --}}
-            <img
+            class="lg:w-1/4 max-w-screen-sm h-80 lg:h-full object-cover mx-auto rounded"
+            src="{{ asset('uploads').'/'.$book->imagen}}">
+            {{-- <img
             alt="imagen del post {{ $book->titulo }}"
             class="lg:w-1/4 max-w-screen-sm h-full object-cover object-center rounded"
-            src="{{ asset('img/portada3.jpg')}}">
+            src="{{ asset('img/libroa.jpg')}}"> --}}
 
           {{-- seccion informacion del libro --}}
           <div class="lg:w-2/5 w-full lg:pl-5 lg:py-6 lg:pr-2 mt-6 lg:mt-0 ">

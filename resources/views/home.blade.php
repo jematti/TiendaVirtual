@@ -95,7 +95,7 @@
             @foreach ($books as $book)
             <a href='{{ route('books.show', $book) }}' class="relative block bg-white border border-gray-200 rounded-lg">
 
-                <img loading="lazy" alt="imagen del post {{ $book->titulo }}" class="object-contain w-full sm:h-72 h-56 hover:grow hover:shadow-lg" src="{{ asset('uploads').'/'.$book->imagen}}" />
+                <img loading="lazy" alt="imagen del post {{ $book->titulo }}" class="object-contain w-full sm:h-72 mt-2 h-56 hover:grow hover:shadow-lg" src="{{ asset('uploads').'/'.$book->imagen}}" />
 
 
                 <div class="p-2">

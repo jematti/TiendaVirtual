@@ -44,8 +44,12 @@ class CategoryController extends Controller
 
         Category::create($request->all());
 
-        return redirect()->route('category.index')
-                        ->with('store','ok');
+        session()->flash('message', 'Post successfully updated.');
+
+        // return redirect()->route('category.index')
+        //                 ->with('store','ok');
+
+        return redirect()->route('category.index');
 
 
     }

@@ -5,21 +5,15 @@
     <h2 class="bg-white text-lg rounded-lg p-4 text-center font-bold border-2 border-sky-800">Lista de Editoriales</h2>
 
   {{-- menu de navegacion para crear y editar editorial --}}
-  <div class="flex">
-    <div class="w-1/2 mt-5 p-2 ">
-        <button class="w-full uppercase h-10 px-5 bg-white text-red-500 transition-colors font-bold duration-150 border border-red-500  focus:shadow-outline hover:bg-red-500 hover:text-white py-2  rounded-lg inline-flex " onclick="location.href = '{{ route('editorial.create') }}'">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-              </svg>
-              <span>Agregar Editorial</span>
+  <div class="md:grid grid-cols-2 gap-1  sm:flex-grow">
+    <div class="my-2 p-2 ">
+        <button class="w-full p-2 uppercase bg-sky-600 text-white font-bold hover:bg-sky-700 border border-gray-900  rounded-lg " onclick="location.href = '{{ route('editorial.create') }}'">
+            <i class="fa-solid fa-plus"></i><span class="px-2">Agregar Editorial</span>
         </button>
     </div>
-    <div class="w-1/2  mt-5 p-2 ">
-        <button class="w-full uppercase h-10 px-5 bg-white text-red-500 transition-colors font-bold duration-150 border border-red-500  focus:shadow-outline hover:bg-red-500 hover:text-white py-2  rounded-lg inline-flex " onclick="location.href = '{{ route('editorial.index') }}'">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-              <span>Listar Editoriales</span>
+    <div class="my-2 p-2 ">
+        <button class="w-full p-2 uppercase bg-sky-600 text-white font-bold hover:bg-sky-700 border border-gray-900  rounded-lg" onclick="location.href = '{{ route('editorial.index') }}'">
+            <i class="fa-solid fa-angle-down"></i><span class="px-2">Listar Editorial</span>
         </button>
     </div>
   </div>

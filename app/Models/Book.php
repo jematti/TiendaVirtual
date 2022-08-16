@@ -32,6 +32,7 @@ class Book extends Model
         'editorial_id',
         'category_id',
         'repository_id',
+        'isbn',
 
     ];
     // relacion n a 1 un libro solo puede tener una editorial/categoria/autor/repositorio
