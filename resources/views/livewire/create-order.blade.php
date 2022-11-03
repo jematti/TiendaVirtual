@@ -1,5 +1,6 @@
 <div class="container mx-auto">
     <div class="grid lg:grid-flow-col h-auto lg:grid-cols-3 md:grid-cols-1 gap-4 p-5 bg-gray-300 ">
+        <form wire:submit.prevent="create_order" enctype="multipart/form-data">
         {{-- formulario de datos personales --}}
         <div class="shadow-lg text-lg text-left bg-white py-5 rounded-lg row-span-2">
             <div class="px-5">
@@ -278,11 +279,15 @@
             </div>
 
             {{-- boton para confirmar pedido --}}
-            <button wire:loading.attr="disabled" wire:target="create_order" wire:click="create_order" class="w-full px-16 bg-red-500 hover:bg-red-400 text-white font-bold py-2 mt-15 rounded-lg ">
+            {{-- <button wire:loading.attr="disabled" wire:target="create_order" wire:click="create_order" class="w-full px-16 bg-red-500 hover:bg-red-400 text-white font-bold py-2 mt-15 rounded-lg ">
                 Realizar Compra
-            </button>
+            </button> --}}
             {{-- fin de seccion boton de confirmar pedido --}}
         </div>
+        <button class="w-full px-16 bg-red-500 hover:bg-red-400 text-white font-bold py-2 mt-15 rounded-lg ">
+            Realizar Compra
+        </button>
+    </form>
         {{-- fin lista de resumen de pedidos --}}
     </div>
 
